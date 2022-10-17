@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrum wsparcia GM System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script src="js/script.js" defer></script>
+    <script src="js/script_index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/549e2d9780.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- logging Window -->
+    <div class="log_window">
+      <div class="logo"><img src="img/logo.png" alt="GM System logo" /></div>
+      <div class="login">
+        <input type="text" class="sold_to" placeholder="Twoje Sold-to" />
+        <button class="btn_log">Zaloguj</button>
+      </div>
+      <div class="sold_info">
+        <button class="sold_find">Gdzie znajdę numer Sold-to?</button>
+        <p class="wrong_sold_to hidden">Wprowadziłeś błędne Sold-to</p>
+      </div>
+    </div>
+
+    <!-- App Window -->
+    <div class="main_container hidden">
+      <div class="header">
+        <nav>
+          <div class="nav_logo">
+            <a href="index.html"
+              ><img src="img/small_logo.png" alt="GM System small logo"
+            /></a>
+          </div>
+          <div class="nav_btns">
+            <a class="nav_btn" href="download.html"
+              >Pobierz <i class="fa-solid fa-download"></i
+            ></a>
+
+            <a class="nav_btn" href="ticket.html"
+              >Utwórz zgłoszenie <i class="fa-solid fa-bug"></i
+            ></a>
+            <div class="nav_account_settings">
+              <i class="fa-solid fa-cog fa-3x"></i>
+            </div>
+          </div>
+          <div id="mySidenav" class="account_settings_sidenav">
+            <a href="javascript:void(0)" class="closebtn"
+              ><i class="fa-solid fa-xmark fa-xl"></i
+            ></a>
+            <a href="#">Moje zgłoszenia</a>
+            <a href="#">Moje dane</a>
+            <a href="#">Ustawienia konta</a>
+            <a href="#">Kontakt</a>
+            <a href="index.html" class="log_out">Wyloguj</a>
+          </div>
+          <div class="searching_bar">
+            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+            <input
+              class="search_field"
+              type="text"
+              id="mySearch"
+              onkeyup="serchFilter()"
+              placeholder="Wpisz hasło (np. licencja domowa)..."
+              title="Type in a category"
+            />
+            <div class="search_btn">Szukaj</div>
+          </div>
+        </nav>
+        <div class="answers">
+          <ul id="myMenu" class="help_topics_ul hidden">
+            <li><a class="help_topic_li" href="#">Licencja domowa</a></li>
+            <li>
+              <a class="help_topic_li" href="#"
+                >Przeniesienie licencji na inny komputer</a
+              >
+            </li>
+            <li><a class="help_topic_li" href="#">Instalacja Solid Edge</a></li>
+            <li>
+              <a class="help_topic_li" href="#">Konfiguracja Solid Edge</a>
+            </li>
+            <li>
+              <a class="help_topic_li" href="#">Instalacja Standard Parts</a>
+            </li>
+
+            <li>
+              <a class="help_topic_li" href="#">Instalacja polskich czcionek</a>
+            </li>
+            <li>
+              <a class="help_topic_li" href="#"
+                >Resetowanie ustawień Solid Edge</a
+              >
+            </li>
+            <li>
+              <a class="help_topic_li" href="#"
+                >Aktywacja licencji Solid Edge</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main_content">
+        <main>
+          <div class="help_topic">
+            <h2>Witaj w Centrum Wsparcia GM SYSTEM</h2>
+            <p>
+              W centrum sprawcie masz możliwość wykonania zgłoszenia problemu,
+              pobrania plików instalacyjnych oprogramowania lub przeszukać bazę
+              dostępnych artykułow.
+            </p>
+          </div>
+
+          <div class="ld help_topic hidden">
+            <h2>Licencja domowa Solid Edge</h2>
+            <p>W tym artykule dowiesz się jak wygenerować licencję domową.</p>
+          </div>
+          <div class="plnik help_topic hidden">
+            <h2>Jak przeniesienie licencji na inny komputer</h2>
+            <p>
+              W tym artykule dowiesz się jak przenieść licencję na inny
+              komputer.
+            </p>
+          </div>
+          <div class="ise help_topic hidden">
+            <h2>Instalacja Solid Edge</h2>
+            <p>W tym artykule dowiesz się jak zainstalować Solid Edge 2022</p>
+          </div>
+          <div class="kse help_topic hidden">
+            <h2>Konfiguracja Solid Edge</h2>
+            <p>
+              W tym artykule dowiesz się jak poprawnie skonfigurować Solid Edge
+              2022
+            </p>
+          </div>
+          <div class="isp help_topic hidden">
+            <h2>Instalacja Standard Parts</h2>
+            <p>
+              W tym artykule dowiesz się jak zainstalować dodatek Standard Parts
+            </p>
+          </div>
+          <div class="ipc help_topic hidden">
+            <h2>Instalacja polskich czcionek</h2>
+            <p>
+              W tym artykule dowiesz się jak zainstalować polskie czcionki do
+              Solid Edge
+            </p>
+          </div>
+          <div class="ruse help_topic hidden">
+            <h2>Resetowanie ustawień Solid Edge</h2>
+            <p>
+              W tym artykule dowiesz się jak zresetować ustawienia Solid Edge
+            </p>
+          </div>
+          <div class="alse help_topic hidden">
+            <h2>Aktywacja nowej licencji Solid Edge</h2>
+            <p>
+              W tym artykule dowiesz się jak aktywować nową licencję Solid Edge
+            </p>
+          </div>
+        </main>
+        <aside>
+          <p>Szybkie linki</p>
+          <ul class="quick_links_ul">
+            <li class="quick_links_li">
+              <i class="fa-solid fa-angle-right fa-xs"></i
+              ><a href="" class="quick_links_btn">TeamViewer</a>
+            </li>
+            <li class="quick_links_li">
+              <i class="fa-solid fa-angle-right fa-xs"></i
+              ><a href="" class="quick_links_btn">Inst. pływająca</a>
+            </li>
+            <li class="quick_links_li">
+              <i class="fa-solid fa-angle-right fa-xs"></i
+              ><a href="" class="quick_links_btn">Licencja domowa</a>
+            </li>
+            <li class="quick_links_li">
+              <i class="fa-solid fa-angle-right fa-xs"></i
+              ><a href="" class="quick_links_btn">Przeniesienie licencji</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

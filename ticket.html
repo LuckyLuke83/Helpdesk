@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrum wsparcia GM System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/ticket.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script src="js/script.js" defer></script>
+    <script src="js/script_ticket.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/549e2d9780.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- App Window -->
+    <div class="main_container">
+      <div class="header">
+        <nav>
+          <div class="nav_logo">
+            <a href="index.html"
+              ><img src="img/small_logo.png" alt="GM System small logo"
+            /></a>
+          </div>
+          <div class="nav_btns">
+            <a class="nav_btn" href="#"
+              >TeamViewer <i class="fa-solid fa-laptop"></i
+            ></a>
+
+            <a class="nav_btn" href="download.html"
+              >Pobierz <i class="fa-solid fa-download"></i
+            ></a>
+            <div class="nav_account_settings">
+              <i class="fa-solid fa-cog fa-3x"></i>
+            </div>
+          </div>
+          <div id="mySidenav" class="account_settings_sidenav">
+            <a href="javascript:void(0)" class="closebtn"
+              ><i class="fa-solid fa-xmark fa-xl"></i
+            ></a>
+            <a href="#">Moje zgłoszenia</a>
+            <a href="#">Moje dane</a>
+            <a href="#">Ustawienia konta</a>
+            <a href="#">Kontakt</a>
+            <a href="index.html" class="log_out">Wyloguj</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="main_content">
+        <div class="main_section">
+          <p>Zgłoszenie</p>
+          <form action="" target="_self">
+            <ul class="form_flex">
+              <li class="form_row">
+                <select id="software" name="software" class="software">
+                  <option value="">Wybierze oprogramowania</option>
+                  <option value="SE">SE</option>
+                  <option value="NX">NX</option>
+                </select>
+
+                <select
+                  id="soft_version"
+                  name="soft_version"
+                  class="soft_version hidden SE"
+                >
+                  <option value="">Wersja</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                </select>
+                <select
+                  id="soft_version"
+                  name="soft_version"
+                  class="soft_version hidden NX"
+                >
+                  <option value="">Wersja</option>
+                  <option value="2007">2007</option>
+                  <option value="1982">1982</option>
+                  <option value="1956">1956</option>
+                </select>
+              </li>
+              <li class="form_row">
+                <select id="typ_zgloszenia" name="typ_zgloszenia">
+                  <option value="">Typ zgłoszenia</option>
+                  <option value="licencja">Problem z licencją</option>
+                  <option value="blad">Zgłoszenie błędu</option>
+                  <option value="ulepszenie">Propozycja ulepszenia</option>
+                  <option value="pomoc">Prośba o pomoc</option>
+                </select>
+              </li>
+              <li class="form_row">
+                <input
+                  type="text"
+                  name=""
+                  id="temat"
+                  placeholder="Temat zgłoszenia"
+                />
+              </li>
+
+              <li class="form_row form_text">
+                <textarea
+                  name=""
+                  id="zgloszenie"
+                  rows="7"
+                  placeholder="Treść zgłoszenia"
+                ></textarea>
+              </li>
+              <li class="form_row">
+                <input type="submit" value="Wyślij zgłoszenie" id="submit" />
+              </li>
+            </ul>
+          </form>
+        </div>
+        <aside>
+          <p>
+            Pamiętaj aby przed wysłaniem zgłoszenia problemu zainstalować
+            najnowsze uaktualnienie oraz sprawdzić czy problem nadal występuje.
+          </p>
+          <p>Najnowsze uaktualnienie znajdziesz w sekcji:</p>
+          <a href="download.html" class="download_btn"
+            >Pobierz <i class="fa-solid fa-download"></i
+          ></a>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

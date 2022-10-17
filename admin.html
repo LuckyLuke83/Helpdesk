@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrum wsparcia GM System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script src="js/script.js" defer></script>
+    <script src="js/script_admin.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/549e2d9780.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- logging Window -->
+    <div class="log_window hidden">
+      <div class="logo"><img src="img/logo.png" alt="GM System logo" /></div>
+      <div class="login">
+        <input type="text" class="sold_to" placeholder="Twoje Sold-to" />
+        <button class="btn_log">Zaloguj</button>
+      </div>
+      <div class="sold_info">
+        <button class="sold_find">Gdzie znajdę numer Sold-to?</button>
+        <p class="wrong_sold_to hidden">Wprowadziłeś błędne Sold-to</p>
+      </div>
+    </div>
+
+    <!-- App Window -->
+    <div class="main_container">
+      <div class="header">
+        <nav>
+          <div class="nav_logo">
+            <a href="index.html"
+              ><img src="img/small_logo.png" alt="GM System small logo"
+            /></a>
+          </div>
+          <div class="nav_btns">
+            <a class="nav_btn" href="download.html"
+              >Pobierz <i class="fa-solid fa-download"></i
+            ></a>
+
+            <a class="nav_btn" href="ticket.html"
+              >Utwórz zgłoszenie <i class="fa-solid fa-bug"></i
+            ></a>
+            <div class="nav_account_settings">
+              <i class="fa-solid fa-cog fa-3x"></i>
+            </div>
+          </div>
+          <div id="mySidenav" class="account_settings_sidenav">
+            <a href="javascript:void(0)" class="closebtn"
+              ><i class="fa-solid fa-xmark fa-xl"></i
+            ></a>
+            <a href="#">Moje zgłoszenia</a>
+            <a href="#">Moje dane</a>
+            <a href="#">Ustawienia konta</a>
+            <a href="#">Kontakt</a>
+            <a href="index.html" class="log_out">Wyloguj</a>
+          </div>
+        </nav>
+      </div>
+
+      <main>
+        <div class="options_tab">
+          <div class="options_tab_items">
+            <button class="options_tab_item item_active btn1" data-tab="1">
+              <i class="fa-solid fa-list"></i>Lista klientów
+            </button>
+            <button class="options_tab_item btn2" data-tab="2">
+              <i class="fa-solid fa-pen-to-square"></i>Edytuj klienta
+            </button>
+            <button class="options_tab_item btn3" data-tab="3">
+              <i class="fa-solid fa-circle-plus"></i>Dodaj klienta
+            </button>
+            <button class="options_tab_item btn4" data-tab="4">
+              <i class="fa-solid fa-circle-question"></i>Czas pokaże
+            </button>
+          </div>
+          <div class="options_content options_content_1 options_content_active">
+            <h3>Lista klientów</h3>
+            <div class="clients_list">
+              <!-- TEMPLATE
+                <div class="description_row">
+                <div class="description_lp td">L.P.</div>
+                <div class="description td">Nazwa</div>
+                <div class="description td">Sold-to</div>
+                <div class="description td">Oprogramowanie</div>
+              </div>
+              <div class="description_row">
+                <div class="description_lp">1</div>
+                <div class="description">ZPUE</div>
+                <div class="description">1111</div>
+                <div class="description">SE, NX</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="options_content options_content_2">
+            <h3>Edytuj klienta</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="options_content options_content_3">
+            <h3>Dodaj klienta</h3>
+            <div class="container">
+              <div class="container_element td">
+                <p>Nazwa firmy</p>
+                <input class="container_input company" type="text" />
+              </div>
+              <div class="container_element td">
+                <p>Sold-to</p>
+                <input class="container_input sold_to_value" type="text" />
+              </div>
+              <div class="container_element td">
+                <label for="software">Soft:</label>
+                <div class="software_flex">
+                  <select name="software" id="software">
+                    <option value="SE">Solid Edge</option>
+                    <option value="NX">NX</option>
+                    <option value="FM">FEMAP</option>
+                    <option value="TC">Tema Center</option>
+                  </select>
+                  <i class="add_soft fa-solid fa-circle-plus fa-lg"></i>
+                </div>
+                <div class="software_flex">
+                  <div class="soft_added"></div>
+                  <i class="remove_soft fa-solid fa-circle-minus fa-lg"></i>
+                </div>
+              </div>
+            </div>
+            <button class="add_client_btn">
+              <i class="add_client fa-solid fa-circle-plus"></i>Dodaj klienta
+            </button>
+          </div>
+          <div class="options_content options_content_4">
+            <h3>Czas pokaże</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

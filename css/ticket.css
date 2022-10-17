@@ -1,0 +1,157 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* GENERAL SECTION */
+
+/* DOWNLOAD */
+
+aside {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.form_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form_row {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  /* padding: 1rem 0; */
+}
+
+.form_text {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form_row textarea,
+.form_row input,
+.form_row select {
+  width: 100%;
+  font-family: inherit;
+  padding: 0.5rem;
+}
+
+#soft_version {
+  width: 50%;
+}
+
+#submit {
+  border: none;
+  background-color: var(--primary1);
+  color: var(--white);
+  font-weight: 500;
+  padding: 1rem 0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#submit:hover {
+  background-color: var(--primary2);
+}
+
+.download_btn {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--black);
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.15rem 1rem;
+  transition: var(--transition);
+}
+
+.download_btn:hover {
+  background-color: var(--primary1);
+  border: 1px solid var(--primary1);
+  color: var(--white);
+}
+
+/* LAST */
+
+.hidden {
+  display: none;
+}
+
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* ABOVE 768px (Smaller tablets) */
+/**************************/
+
+@media (min-width: 48em) {
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+  .nav_btn:link,
+  .nav_btn:visited {
+    /* padding: 0.6rem 1rem; */
+    font-size: 1.6rem;
+  }
+
+  .nav_account_settings:hover,
+  .nav_account_settings:active {
+    transition: scale(1.1);
+  }
+
+  .download_dropdown a {
+    font-size: 1.2rem;
+  }
+
+  .main_content {
+    /* display: grid;
+    grid-template-columns: auto 25rem;
+    grid-template-rows: auto;
+    gap: 1rem; */
+    padding: 2rem 1rem;
+  }
+
+  .download_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    grid-template-areas:
+      'header header'
+      'new_soft old_soft';
+    font-size: var(--text-regular);
+  }
+
+  main {
+    font-size: 1.4rem;
+  }
+
+  aside {
+    font-size: 1.6rem;
+  }
+}
+
+/**************************/
+/* ABOVE 1024px (Smaller desktops) */
+/**************************/
+
+@media (min-width: 64em) {
+  .main_container {
+    width: 1024px;
+    margin: auto;
+  }
+}

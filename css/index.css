@@ -1,0 +1,158 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* LOG WINDOW */
+
+.log_window {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.log_window img {
+  width: 38rem;
+}
+
+.login {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+}
+
+.sold_to {
+  font-family: inherit;
+  height: 100%;
+  padding: 0 0.5rem;
+}
+
+.btn_log {
+  cursor: pointer;
+  padding: 0 1.5rem;
+  background-color: var(--primary1);
+  border: none;
+  height: 100%;
+  color: var(--white);
+  border-radius: 2px;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.btn_log:hover,
+.btn_log:active {
+  background-color: var(--primary1_shades);
+}
+
+.sold_info {
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+}
+
+.sold_find {
+  background-color: var(--white);
+  border: none;
+  font-size: 1.4rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.wrong_sold_to {
+  font-size: 1.2rem;
+  color: red;
+  text-align: center;
+}
+
+/* Main content */
+
+.main_content {
+  display: grid;
+  grid-template-columns: auto 20rem;
+  grid-template-rows: auto;
+  gap: 1rem;
+  min-height: 38rem;
+  padding: 2rem 1rem;
+  border-left: solid 2px var(--grey);
+  border-right: solid 2px var(--grey);
+}
+
+main {
+  font-family: inherit;
+  font-size: 1.6em;
+}
+
+aside {
+  align-self: start;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: solid 3px var(--grey);
+  box-shadow: var(--shadow2);
+}
+
+aside p {
+  margin-bottom: 1rem;
+}
+
+.quick_links_ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quick_links_li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quick_links_btn {
+  padding: 0.25rem 0.5rem;
+  color: var(--black);
+  text-decoration: none;
+  border: solid 2px var(--white);
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.quick_links_btn:hover {
+  border: solid 2px var(--black);
+  /* color: var(--white); */
+}
+
+/* DOWNLOAD */
+
+.download_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header'
+    'new_soft old_soft';
+}
+
+.soft_name {
+  grid-area: header;
+}
+
+.hidden {
+  display: none;
+}

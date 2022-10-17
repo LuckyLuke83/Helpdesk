@@ -1,0 +1,53 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* ABOVE 768px (Smaller tablets) */
+/**************************/
+
+@media (min-width: 48em) {
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+  .nav_btn:link,
+  .nav_btn:visited {
+    /* padding: 0.6rem 1rem; */
+    font-size: 1.6rem;
+  }
+
+  .download_dropdown a {
+    font-size: 1.2rem;
+  }
+
+  .main_content {
+    display: grid;
+    grid-template-columns: auto 25rem;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  /* .main_section {
+    width: 768px;
+  } */
+
+  main {
+    font-size: 1.4rem;
+  }
+
+  aside {
+    font-size: 1.6rem;
+  }
+}
+
+/**************************/
+/* ABOVE 1024px (Smaller desktops) */
+/**************************/
+
+@media (min-width: 64em) {
+  .main_container {
+    width: 1024px;
+    margin: auto;
+  }
+}
